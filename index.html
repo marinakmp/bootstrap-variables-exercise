@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Netmechanics NASA Project v2</title>
         <!-- Text Font -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:400,700&display=swap" rel="stylesheet"> 
         <!-- Bootstrap CSS File -->
         <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
         <!-- CSS File -->
@@ -34,10 +34,10 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="input_4">Input with Right Indication</label>
-                        <div class="d-flex">
+                        <div class="position-relative">
                             <input type="text" class="form-control" aria-label="Username" id="input_4">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="euro-addon">€</span>
+                            <div class="position-absolute euro">
+                                <span id="euro-addon">€</span>
                             </div>
                         </div>
                         </div>
@@ -52,55 +52,51 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <label for="input_5">Input Error</label>
-                            <input type="email" rel="tooltip" title="error message" class="form-control w-50" id="input_6" name="errori" required>                            
-                        </div>
+                    <div class="form-group">
+                        <label for="input_6">Input Error</label>
+                        <input type="email" rel="tooltip" title="error message" class="form-control w-50" id="input_6" name="errori" required>   
                     </div>
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between">
-                                <label for="input_5">Password</label>
-                                <small id="HelpBlock" class="form-text text-muted" required="">
-                                    At least 8 characters mixed with digits
-                                </small>
-                            </div>
-                            <input type="text" class="form-control" id="input_7" required>                            
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between">
+                            <label for="input_7">Password</label>
+                            <small id="HelpBlock" class="form-text text-muted" required="">
+                                At least 8 characters mixed with digits
+                            </small>
                         </div>
+                        <input type="text" class="form-control" id="input_7" required>   
                     </div>
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between">
-                                <label for="input_5">Password</label>
-                                <small id="HelpBlock" class="form-text text-muted" required="">
-                                    At least 8 characters mixed with digits
-                                </small>
-                            </div>
-                            <input type="text" class="form-control" id="input_8" required>                            
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between">
+                            <label for="input_8">Password</label>
+                            <small id="HelpBlock" class="form-text text-muted" required="">
+                                At least 8 characters mixed with digits
+                            </small>
                         </div>
+                        <input type="text" class="form-control" id="input_8" required>  
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between">
-                                <label for="input_5">Password</label>
-                                <small id="HelpBlock" class="form-text text-muted" required="">
-                                    At least 8 characters mixed with digits
-                                </small>
-                            </div>
-                            <input type="text" class="form-control" id="input_9" required>                            
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between">
+                            <label for="input_9">Password</label>
+                            <small id="HelpBlock" class="form-text text-muted" required="">
+                                At least 8 characters mixed with digits
+                            </small>
                         </div>
+                        <input type="text" class="form-control" id="input_9" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between">
-                                <label for="input_5">Password</label>
-                                <small id="HelpBlock" class="form-text text-muted" required="">
-                                    At least 8 characters mixed with digits
-                                </small>
-                            </div>
-                            <input type="text" class="form-control" id="input_10" required>                            
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between">
+                            <label for="input_10">Password</label>
+                            <small id="HelpBlock" class="form-text text-muted" required="">
+                                At least 8 characters mixed with digits
+                            </small>
                         </div>
+                        <input type="text" class="form-control" id="input_10" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                     <div class="row">
                         <div class="col-6">
