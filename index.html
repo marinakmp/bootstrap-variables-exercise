@@ -20,46 +20,180 @@
             <h1>Forms</h1>
             <div class="row">
                 <div class="col-6">
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <label for="input_1">Simple Input</label>
-                            <input type="text" class="form-control" id="input_1">
-                        </div>
+                    <div class="form-group mb-3">   
+                        <label for="input_1">Simple Input</label>
+                        <input type="text" class="form-control" aria-label="Username" id="input_1">
                     </div>
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <label for="input_2">Input Focus</label>
-                            <input type="text" class="form-control" id="input_2">
-                        </div>
+                    <div class="form-group mb-3">
+                        <label for="input_2">Input Focus</label>
+                        <input type="text" class="form-control" aria-label="Username" id="input_2">
                     </div>
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <label for="input_3">Input with Left Indication</label>
-                            <input type="text" class="form-control" id="input_3">
-                        </div>
+                    <div class="form-group mb-3">
+                        <label for="input_3">Input with Left Indication</label>
+                        <input type="text" class="form-control" placeholder="http://yourstore.com/cat" aria-label="Username" id="input_3">
                     </div>
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <label for="input_4">Input with Right Indication</label>
-                            <input type="text" class="form-control" id="input_4">
+                    <div class="form-group mb-3">
+                        <label for="input_4">Input with Right Indication</label>
+                        <div class="d-flex">
+                            <input type="text" class="form-control" aria-label="Username" id="input_4">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="euro-addon">€</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-12">
-                            <label for="input_5">Simple with Help Text</label>
-                            <small id="HelpBlock" class="form-text text-muted">
-                                Help Text
+                        </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-between">
+                            <label for="input_5">Simple with help text</label>
+                            <small id="HelpBlock" class="form-text text-muted" required="">
+                                I'm here to help the user
                             </small>
-                            <input type="text" class="form-control" id="input_5">                            
                         </div>
+                        <input type="text" class="form-control" aria-label="Username" id="input_5">
                     </div>
                 </div>
                 <div class="col-6">
-                    
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label for="input_5">Input Error</label>
+                            <input type="email" rel="tooltip" title="error message" class="form-control w-50" id="input_6" name="errori" required>                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between">
+                                <label for="input_5">Password</label>
+                                <small id="HelpBlock" class="form-text text-muted" required="">
+                                    At least 8 characters mixed with digits
+                                </small>
+                            </div>
+                            <input type="text" class="form-control" id="input_7" required>                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between">
+                                <label for="input_5">Password</label>
+                                <small id="HelpBlock" class="form-text text-muted" required="">
+                                    At least 8 characters mixed with digits
+                                </small>
+                            </div>
+                            <input type="text" class="form-control" id="input_8" required>                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between">
+                                <label for="input_5">Password</label>
+                                <small id="HelpBlock" class="form-text text-muted" required="">
+                                    At least 8 characters mixed with digits
+                                </small>
+                            </div>
+                            <input type="text" class="form-control" id="input_9" required>                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between">
+                                <label for="input_5">Password</label>
+                                <small id="HelpBlock" class="form-text text-muted" required="">
+                                    At least 8 characters mixed with digits
+                                </small>
+                            </div>
+                            <input type="text" class="form-control" id="input_10" required>                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">This is a Checkbox</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2">This is a selected checkbox</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                <label class="custom-control-label" for="customCheck3">This is a Checkbox</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                <label class="custom-control-label" for="customCheck4">This is a selected checkbox</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">This is a selected radio button</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">This is a radio button</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">This is a selected radio button</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio4">This is a radio button</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>  
+            <div class="row my-5">
+                <div class="col-6">
+                    <div class="alert alert-info" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>This is a notice</strong><br>It means you should informed of something.                        
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>This is an alert</strong><br>It means something important happened or is going to happen.                        
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>This is a warning</strong><br>It means something went probably wrong, horribly wrong.                        
+                    </div>
                 </div>
-            </div>            
+                <div class="col-6">
+                    <div class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title">Reset Module?</h2>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>You're about to reset [module name] module<br><span>This action cannot be undone</span></p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae a impedit cum blanditiis laboriosam. Quaerat hic cupiditate in a officia officiis expedita velit vero, beatae accusamus ipsa, eaque eius? Nihil.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga neque hic voluptates voluptatum soluta eaque vitae ut omnis in? Temporibus, numquam sequi? Repellat dolorum sequi quos accusantium magni eligendi.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                                    <button type="button" class="btn btn-primary">CONFIRM THIS ACTION</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
         </div>
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('input[title]').tooltip({trigger: 'focus', placement:'right'});
+            })
+        </script>
     </body>
 </html>

@@ -3,78 +3,20 @@ $h2-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 0.750;
 $h4-font-size: $font-size-base * 0.750;
 
-$blue:    #25b9d7;
-$blue-hover: #3ed2f0;
-$light-blue: #93dceb;
-$dark-blue: #155666;
-$purple:  #44309e;
-$pink:    #d40054;
-$red:     #d77a83;
-$green: #78d07d;
-$notice-green: #70b580;
-$yellow-hover: #ffd100;
-$yellow:  #fbb000;
-
-$colors: map-remove($theme-colors, "indigo", "orange", "teal", "cyan");
-
-$colors: map-merge(
-  (
-    "blue": $blue,
-    "blue-hover": $blue-hover,
-    "light-blue": $light-blue,
-    "dark-blue": $dark-blue,
-    "pink": $pink,
-    "red": $red,
-    "green": $green,
-    "notice-green": $notice-green,
-    "yellow-hover": $yellow-hover,
-    "yellow": $yellow
-  ),
-  $colors
-);
-
-$primary:       $blue;
-$secondary:     $gray-600;
-
-$theme-colors: map-remove($theme-colors, "success", "info", "warning", "danger", "light", "dark");
+$primary:       #00b9d8;
+$secondary:     #fdbe01;
 
 $theme-colors: map-merge(
   (
     "primary":    $primary,
-    "secondary":  $secondary,
+    "secondary":  #fdbe01
   ),
   $theme-colors
 );
 
-$gray-100: #fbfbfc;
-$gray-200: #f2f6f8;
-$gray-300: #ebedef;
-$gray-400: #bbcdd2;
-$gray-500: #95a7ad;
-$gray-600: #465d64;
-$gray-700: #363a41;
-$gray-800: #292c32;
-$gray-900: #1e2024;
-
-$grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  ),
-  $grays
-);
-
-$label-margin-bottom: $font-size-base * 0.6875;
-$form-group-margin-bottom: $font-size-base * 1.625;
-
-
+body {
+  background: map-get($theme-colors, 'primary');
+}
 // $display1-size:               6rem !default;
 // $display2-size:               5.5rem !default;
 // $display3-size:               4.5rem !default;
