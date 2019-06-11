@@ -1,7 +1,6 @@
 //TYPOGRAPHY
 h1 {
     font-family: 'Roboto';
-    font-weight: bold;
     color: #155666
 }
 
@@ -10,15 +9,7 @@ h2 {
     color: #1e2024
 }
 
-h3 {
-    font-family: 'Open Sans';
-    font-weight: bold;
-    color: #465d64;
-}
-
 h4 {
-    font-family: 'Open Sans';
-    font-weight: 600;
     color: #465d64;
 }
 
@@ -38,8 +29,12 @@ p {
     padding-right: 22px;
 }
 
-.submit {
-}
+// .currency::after {
+//     position: absolute;
+//     content: ('€');
+//     height: auto;
+//     width: auto;
+// }
 
 .tooltip-inner {
     background-color: #f3d3d6;
@@ -60,8 +55,10 @@ p {
 }
 
 .btn-secondary {
-    &:hover, &:focus{
+    color: white;
+    @include hover-focus {
         background: $secondary-hover;
+        color: white;
         border-color: $secondary-hover;
     }
 }
@@ -71,4 +68,14 @@ p {
     .alert-#{$color} {
         border-color: darken($value, 15%);
     }
+}
+
+.modal {
+    border: 1px solid $gray-300;
+    border-radius: .25rem;
+    padding: 25px;
+  }
+
+  .close {
+      color: rgba(0, 0, 0, 0.5);
   }

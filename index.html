@@ -17,24 +17,23 @@
     </head>
     <body>
         <div class="container">
-            <h1>Forms</h1>
-            <form action="#" class="needs-validation">
+            <form action="#" class="needs-validation my-2">
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group mb-3">   
-                            <label for="input_1">Simple Input</label>
+                            <label for="input_1" class="font-weight-bold">Simple Input</label>
                             <input type="text" class="form-control" aria-label="Username" id="input_1">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="input_2">Input Focus</label>
+                            <label for="input_2" class="font-weight-bold">Input Focus</label>
                             <input type="text" class="form-control" aria-label="Username" id="input_2">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="input_3">Input with Left Indication</label>
+                            <label for="input_3" class="font-weight-bold">Input with Left Indication</label>
                             <input type="text" class="form-control" placeholder="http://yourstore.com/cat" aria-label="Username" id="input_3">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="input_4">Input with Right Indication</label>
+                            <label for="input_4" class="font-weight-bold">Input with Right Indication</label>
                             <div class="position-relative">
                                 <input type="text" class="form-control euro-input" aria-label="Username" id="input_4">
                                 <div class="position-absolute euro">
@@ -44,7 +43,7 @@
                             </div>
                         <div class="form-group mb-3">
                             <div class="d-flex justify-content-between">
-                                <label for="input_5">Simple with help text</label>
+                                <label for="input_5" class="font-weight-bold">Simple with help text</label>
                                 <small id="HelpBlock" class="form-text text-muted" required="">
                                     I'm here to help the user
                                 </small>
@@ -54,13 +53,13 @@
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            <label for="input_6">Input Error</label>
-                            <input type="email" rel="tooltip" title="error message" class="form-control w-50 custom-tooltip" id="input_6" name="errori" required>
+                            <label for="input_6" class="font-weight-bold">Input Error</label>
+                            <input type="email" rel="tooltip" title="error message" class="form-control w-50 custom-tooltip is-invalid" id="input_6" name="errori" required>
                             <div class="invalid-feedback"></div>
                         </div>
                         <div class="form-group">
                             <div class="d-flex justify-content-between">
-                                <label for="input_7">Password</label>
+                                <label for="input_7" class="font-weight-bold">Password</label>
                                 <small id="HelpBlock" class="form-text text-muted" required="">
                                     At least 8 characters mixed with digits
                                 </small>
@@ -70,7 +69,7 @@
                         </div>
                         <div class="form-group">
                             <div class="d-flex justify-content-between">
-                                <label for="input_8">Password</label>
+                                <label for="input_8" class="font-weight-bold">Password</label>
                                 <small id="HelpBlock" class="form-text text-muted" required="">
                                     At least 8 characters mixed with digits
                                 </small>
@@ -80,7 +79,7 @@
                         </div>
                         <div class="form-group">
                             <div class="d-flex justify-content-between">
-                                <label for="input_9">Password</label>
+                                <label for="input_9" class="font-weight-bold">Password</label>
                                 <small id="HelpBlock" class="form-text text-muted" required="">
                                     At least 8 characters mixed with digits
                                 </small>
@@ -90,7 +89,7 @@
                         </div>
                         <div class="form-group">
                             <div class="d-flex justify-content-between">
-                                <label for="input_10">Password</label>
+                                <label for="input_10" class="font-weight-bold">Password</label>
                                 <small id="HelpBlock" class="form-text text-muted" required="">
                                     At least 8 characters mixed with digits
                                 </small>
@@ -142,51 +141,6 @@
                     <button class="btn btn-primary submit" type="submit">Submit Form</button>
                 </div>
             </form>
-            <div class="row my-5">
-                <div class="col-6">
-                    <div class="alert alert-info" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>This is a notice</strong><br>It means you should informed of something.                        
-                    </div>
-                    <div class="alert alert-warning" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>This is an alert</strong><br>It means something important happened or is going to happen.                        
-                    </div>
-                    <div class="alert alert-danger" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>This is a warning</strong><br>It means something went probably wrong, horribly wrong.                        
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="modal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h2 class="modal-title">Reset Module?</h2>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>You're about to reset [module name] module<br><span>This action cannot be undone</span></p>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae a impedit cum blanditiis laboriosam. Quaerat hic cupiditate in a officia officiis expedita velit vero, beatae accusamus ipsa, eaque eius? Nihil.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga neque hic voluptates voluptatum soluta eaque vitae ut omnis in? Temporibus, numquam sequi? Repellat dolorum sequi quos accusantium magni eligendi.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
-                                    <button type="button" class="btn btn-primary">CONFIRM THIS ACTION</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>          
         </div>
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
