@@ -1,4 +1,8 @@
 //TYPOGRAPHY
+body {
+    font-size: 14px;
+}
+
 h1 {
     font-family: 'Roboto';
     color: #155666
@@ -10,13 +14,11 @@ h2 {
 }
 
 h4 {
-    color: #465d64;
+    color: $rock-grey;
 }
 
 p {
-    font-family: 'Open Sans';
-    font-size: 14px;
-    color: #465d64;
+    color: $rock-grey;
 }
 
 //RIGHT INDICATOR IN INPUT FIELD
@@ -77,5 +79,15 @@ p {
   }
 
   .close {
-      color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .accepted {
+    color: #62b86f;
+  }
+  .warning {
+    color: #faac02;
+  }
+  .error {
+    color: #dc7b86;
   }
