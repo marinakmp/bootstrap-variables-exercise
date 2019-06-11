@@ -1,3 +1,4 @@
+//TYPOGRAPHY
 h1 {
     font-family: 'Roboto';
     font-weight: bold;
@@ -27,6 +28,7 @@ p {
     color: #465d64;
 }
 
+//RIGHT INDICATOR IN INPUT FIELD
 .euro {
     right: 10px;
     bottom: 8px;
@@ -41,6 +43,7 @@ p {
     left: auto;
 }
 
+//BUTTON LIGHTENS WHEN HOVER/FOCUS
 .btn-primary {
     &:hover, &:focus {
         background: $primary-hover;
@@ -54,3 +57,10 @@ p {
         border-color: $secondary-hover;
     }
 }
+
+//ALERT THICKER BORDERS
+@each $color, $value in $theme-colors {
+    .alert-#{$color} {
+        border-color: darken($value, 15%);
+    }
+  }
