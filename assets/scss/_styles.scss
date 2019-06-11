@@ -32,6 +32,25 @@ p {
     bottom: 8px;
 }
 
-.form-control {
+.euro-input {
     padding-right: 22px;
+}
+
+.submit {
+    right: 0;
+    left: auto;
+}
+
+.btn-primary {
+    &:hover, &:focus {
+        background: $primary-hover;
+        border-color: $primary-hover
+    }
+}
+
+.btn-secondary {
+    &:hover, &:focus{
+        background: $secondary-hover;
+        border-color: $secondary-hover;
+    }
 }
