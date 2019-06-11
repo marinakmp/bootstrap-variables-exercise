@@ -39,8 +39,16 @@ p {
 }
 
 .submit {
-    right: 0;
-    left: auto;
+}
+
+.tooltip-inner {
+    background-color: #f3d3d6;
+    color: #c95965;
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.bs-tooltip-right .arrow::before {
+  border-right-color: #f3d3d6;
 }
 
 //BUTTON LIGHTENS WHEN HOVER/FOCUS
