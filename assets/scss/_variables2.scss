@@ -413,10 +413,10 @@ $input-btn-border-width:      $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y:               31px !default;
-$btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-y:               1.438rem;
+$btn-padding-x:               1.625rem;
 $btn-font-family:             $input-btn-font-family !default;
-$btn-font-size:               $input-btn-font-size !default;
+$btn-font-size:               1.625rem;
 $btn-line-height:             $input-btn-line-height !default;
 
 $btn-padding-y-sm:            18px !default;
@@ -980,8 +980,8 @@ $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                $border-width !default;
 
 $alert-bg-level:                    -10 !default;
-$alert-border-level:                -9 !default;
-$alert-color-level:                 6 !default;
+$alert-border-level:                1;
+$alert-color-level:                 10;
 
 
 // Progress bars

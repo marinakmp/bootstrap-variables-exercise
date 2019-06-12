@@ -1,4 +1,5 @@
 //Typography
+//TODO Group common props
 .display-1 {
     font-size: 2rem;
     font-family: $font-family-sans-serif;
@@ -40,7 +41,7 @@
     min-width: 240px;
 }
 .btn-primary {
-    &:hover, &:focus {
+    @include hover-focus {
         background: $primary-hover;
         border-color: $primary-hover
     }
@@ -56,14 +57,14 @@
 .btn-outline-primary {
     @include hover-focus {
         color: $primary;
-        color: $primary-hover;
+        color: $primary-hover; // TODO ??
         border-color: $primary-hover;
     }
 }
 .btn-outline-secondary {
     @include hover-focus {
         color: $secondary;
-        color: $secondary-hover;
+        color: $secondary-hover; // TODO ??
         border-color: $secondary-hover;
     }
 }
@@ -80,42 +81,33 @@
 }
 
 .form-control {
-    background-color: #fbfbfc;
+    background-color: #fbfbfc; // TODO use $input-bg
     @include hover-focus {
-        background-color: #fbfbfc
-    }
-}
-
-//ALERT THICKER BORDERS
-.alert {
-    color: #292c32;
-}
-@each $color, $value in $theme-colors {
-    .alert-#{$color} {
-        border-color: darken($value, 15%);
+        background-color: #fbfbfc // TODO use $input-focus-bg
     }
 }
 
 .close{
-    position: absolute;
-    color: rgba(0, 0, 0, 0.5);
+    position: absolute; // TODO use the correct css class
+    color: rgba(0, 0, 0, 0.5); // TODO What about $close-color?
 }
 
-.modal {
-    border: $border-width solid $gray-300;
-    border-radius: .25rem;
-    padding: 25px; 
-    .close {
-    top: 0;
-    right: 0;
-    }
-}
-.alert {
-    .close {
-        top: 20px;
-        right: 20px;
-    }
-}
+// .modal {
+//     border: $border-width solid $gray-300;
+//     border-radius: .25rem;
+//     padding: 25px; 
+//     .close {
+//     top: 0;
+//     right: 0;
+//     }
+// }
+// .alert {
+//     .close {
+//         top: 20px;
+//         right: 20px;
+//     }
+// }
+// TODO Delete the following 3 rulesets. Use the framework.
 .accepted {
 color: #62b86f;
 }
