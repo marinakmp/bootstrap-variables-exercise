@@ -13,11 +13,11 @@
         <!-- Bootstrap CSS File -->
         <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
         <!-- CSS File -->
-        <link rel="stylesheet" href="dist/theme.css?cb=1559913034118">
+        <link rel="stylesheet" href="dist/theme.css?cb=1560332797359">
     </head>
     <body>
         <div class="container">
-            <form action="#" class="needs-validation my-2">
+            <form action="#" class="needs-validation my-2" novalidate>
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group mb-3">   
@@ -35,9 +35,9 @@
                         <div class="form-group mb-3">
                             <label for="input_4" class="font-weight-bold">Input with Right Indication</label>
                             <div class="position-relative">
-                                <input type="text" class="form-control euro-input" aria-label="Username" id="input_4">
-                                <div class="position-absolute euro">
-                                    <span id="euro-addon">€</span>
+                                <input type="text" class="form-control currency-input" aria-label="Username" id="input_4">
+                                <div class="position-absolute currency">
+                                    <span id="currency-addon">€</span>
                                 </div>
                             </div>
                             </div>
@@ -55,7 +55,6 @@
                         <div class="form-group">
                             <label for="input_6" class="font-weight-bold">Input Error</label>
                             <input type="email" rel="tooltip" title="error message" class="form-control w-50 custom-tooltip is-invalid" id="input_6" name="errori" required>
-                            <div class="invalid-feedback"></div>
                         </div>
                         <div class="form-group">
                             <div class="d-flex justify-content-between">
@@ -64,8 +63,7 @@
                                     At least 8 characters mixed with digits
                                 </small>
                             </div>
-                            <input type="password" class="form-control" id="input_7" required> 
-                            <div class="invalid-feedback"></div>  
+                            <input type="password" class="form-control is-invalid" id="input_7" required> 
                         </div>
                         <div class="form-group">
                             <div class="d-flex justify-content-between">
@@ -74,8 +72,7 @@
                                     At least 8 characters mixed with digits
                                 </small>
                             </div>
-                            <input type="password" class="form-control" id="input_8" required>  
-                            <div class="invalid-feedback"></div>
+                            <input type="password" class="form-control is-invalid" id="input_8" required>
                         </div>
                         <div class="form-group">
                             <div class="d-flex justify-content-between">
@@ -84,8 +81,7 @@
                                     At least 8 characters mixed with digits
                                 </small>
                             </div>
-                            <input type="password" class="form-control" id="input_9" required>
-                            <div class="invalid-feedback"></div>
+                            <input type="password" class="form-control is-invalid" id="input_9" required>
                         </div>
                         <div class="form-group">
                             <div class="d-flex justify-content-between">
@@ -94,8 +90,7 @@
                                     At least 8 characters mixed with digits
                                 </small>
                             </div>
-                            <input type="password" class="form-control" id="input_10" required>
-                            <div class="invalid-feedback"></div>
+                            <input type="password" class="form-control is-invalid" id="input_10" required>
                         </div>
                         <div class="row">
                             <div class="col-6 mt-3">
@@ -107,14 +102,6 @@
                                     <input type="checkbox" class="custom-control-input" id="customCheck2">
                                     <label class="custom-control-label" for="customCheck2">This is a selected checkbox</label>
                                 </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                    <label class="custom-control-label" for="customCheck3">This is a Checkbox</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                    <label class="custom-control-label" for="customCheck4">This is a selected checkbox</label>
-                                </div>
                             </div>
                             <div class="col-6 mt-3">
                                 <div class="custom-control custom-radio">
@@ -124,14 +111,6 @@
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio2">This is a radio button</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio3">This is a selected radio button</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio4">This is a radio button</label>
                                 </div>
                             </div>
                         </div>
@@ -144,10 +123,26 @@
         </div>
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('input[title]').tooltip({trigger: 'focus', placement:'right'});
-            })
+        <script>            
+            $('input[title]').tooltip({trigger: 'focus', placement:'right'});
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                        $('input[title]').tooltip('disable');
+                        }, false);
+                    });
+                }, false);
+            })();
         </script>
     </body>
 </html>

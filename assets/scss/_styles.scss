@@ -1,93 +1,134 @@
-//TYPOGRAPHY
-body {
-    font-size: 14px;
+//Typography
+.display-1 {
+    font-size: 2rem;
+    font-family: $font-family-sans-serif;
+    color: #155666;
 }
-
-h1 {
-    font-family: 'Roboto';
-    color: #155666
+.display-2 {
+    font-size: 2rem;
+    font-family: $font-family-sans-serif;
+    color: #1e2024;
 }
-
-h2 {
-    font-family: 'Roboto';
-    color: #1e2024
+.display-3 {
+    color: #465d64;
 }
-
-h4 {
-    color: $rock-grey;
-}
-
-p {
-    color: $rock-grey;
+.display-4 {
+    font-size: .75rem;
 }
 
 //RIGHT INDICATOR IN INPUT FIELD
-.euro {
+.currency {
     right: 10px;
     bottom: 8px;
 }
-
-.euro-input {
+.currency-input {
     padding-right: 22px;
 }
 
-// .currency::after {
-//     position: absolute;
-//     content: ('€');
-//     height: auto;
-//     width: auto;
-// }
-
+//TOOLTIP COLOR
 .tooltip-inner {
-    background-color: #f3d3d6;
-    color: #c95965;
+    background-color: #efc8cb;
+    color: #c45c67;
 }
-
 .bs-tooltip-auto[x-placement^=right] .arrow::before,
 .bs-tooltip-right .arrow::before {
-  border-right-color: #f3d3d6;
+  border-right-color: #efc8cb;
 }
 
 //BUTTON LIGHTENS WHEN HOVER/FOCUS
+.btn {
+    min-width: 240px;
+}
 .btn-primary {
     &:hover, &:focus {
         background: $primary-hover;
         border-color: $primary-hover
     }
 }
-
 .btn-secondary {
-    color: white;
+    color: $white;
     @include hover-focus {
         background: $secondary-hover;
-        color: white;
+        color: $white;
         border-color: $secondary-hover;
+    }
+}
+.btn-outline-primary {
+    @include hover-focus {
+        color: $primary;
+        color: $primary-hover;
+        border-color: $primary-hover;
+    }
+}
+.btn-outline-secondary {
+    @include hover-focus {
+        color: $secondary;
+        color: $secondary-hover;
+        border-color: $secondary-hover;
+    }
+}
+.btn-outline-primary, .btn-outline-secondary {
+    @include hover-focus {
+        background-color: $white;
+    }
+}
+.btn {
+    &.disabled,
+    &:disabled {
+        background-color: #e3ebed;
+  }
+}
+
+.form-control {
+    background-color: #fbfbfc;
+    @include hover-focus {
+        background-color: #fbfbfc
     }
 }
 
 //ALERT THICKER BORDERS
+.alert {
+    color: #292c32;
+}
 @each $color, $value in $theme-colors {
     .alert-#{$color} {
         border-color: darken($value, 15%);
     }
 }
 
-.modal {
-    border: 1px solid $gray-300;
-    border-radius: .25rem;
-    padding: 25px;
-  }
-
-  .close {
+.close{
+    position: absolute;
     color: rgba(0, 0, 0, 0.5);
-  }
+}
 
-  .accepted {
-    color: #62b86f;
-  }
-  .warning {
-    color: #faac02;
-  }
-  .error {
-    color: #dc7b86;
-  }
+.modal {
+    border: $border-width solid $gray-300;
+    border-radius: .25rem;
+    padding: 25px; 
+    .close {
+    top: 0;
+    right: 0;
+    }
+}
+.alert {
+    .close {
+        top: 20px;
+        right: 20px;
+    }
+}
+.accepted {
+color: #62b86f;
+}
+.warning {
+color: #faac02;
+}
+.error {
+color: #dc7b86;
+}
+
+table {
+    th{
+        font-weight: 600;
+        color: #abc2c8;
+    }
+}

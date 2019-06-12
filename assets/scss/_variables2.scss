@@ -69,9 +69,9 @@ $colors: map-merge(
 $primary:       #00b9d8 !default;
 $secondary:     #fdbe01 !default;
 $success:       $green !default;
-$info:          #90dcea !default;
-$warning:       #faae00 !default;
-$danger:        #c95965 !default;
+$info:          #93dceb !default;
+$warning:       #ffd100 !default;
+$danger:        #d77a83 !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
@@ -168,7 +168,7 @@ $sizes: map-merge(
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:                $dark-grey !default;
 
 
 // Links
@@ -235,7 +235,7 @@ $grid-gutter-width:           30px !default;
 $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
-$border-width:                1px !default;
+$border-width:                2px !default;
 $border-color:                $gray-300 !default;
 
 $border-radius:               .25rem !default;
@@ -276,12 +276,12 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Open Sans", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif !default;
+$font-family-sans-serif:      'Roboto', "Helvetica Neue", Arial, sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            'Roboto', "Helvetica Neue", Arial, sans-serif !default;
+$font-family-base:            "Open Sans", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              .875rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
@@ -294,15 +294,15 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 2 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+$h1-font-size:                1.5rem !default;
+$h2-font-size:                1rem !default;
 $h3-font-size:                $font-size-base * .875 !default;
 $h4-font-size:                $font-size-base * .875 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
-$headings-font-family:        'Open Sans' !default;
+$headings-font-family:        $font-family-sans-serif !default;
 $headings-font-weight:        700 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              $dark-grey !default;
@@ -310,7 +310,7 @@ $headings-color:              $dark-grey !default;
 $display1-size:               2rem !default;
 $display2-size:               2rem !default;
 $display3-size:               .875rem !default;
-$display4-size:               3.5rem !default;
+$display4-size:               .75rem !default;
 
 $display1-weight:             700 !default;
 $display2-weight:             300 !default;
@@ -360,7 +360,7 @@ $table-hover-color:           $table-color !default;
 $table-hover-bg:              rgba($black, .075) !default;
 $table-active-bg:             $table-hover-bg !default;
 
-$table-border-width:          $border-width !default;
+$table-border-width:          0 !default;
 $table-border-color:          $border-color !default;
 
 $table-head-bg:               $gray-200 !default;
@@ -388,7 +388,7 @@ $table-border-level:          -6 !default;
 
 $input-btn-padding-y:         .375rem !default;
 $input-btn-padding-x:         .75rem !default;
-$input-btn-font-family:       null !default;
+$input-btn-font-family:       $font-family-sans-serif !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
@@ -396,7 +396,7 @@ $input-btn-focus-width:       .2rem !default;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-y-sm:      1.125rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
@@ -413,13 +413,13 @@ $input-btn-border-width:      $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-y:               31px !default;
 $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-y-sm:            18px !default;
 $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
 $btn-font-size-sm:            $input-btn-font-size-sm !default;
 $btn-line-height-sm:          $input-btn-line-height-sm !default;
@@ -431,7 +431,7 @@ $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
@@ -972,7 +972,7 @@ $modal-transition:                  transform .3s ease-out !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   .75rem !default;
+$alert-padding-y:                   3.375rem !default;
 $alert-padding-x:                   1.25rem !default;
 $alert-margin-bottom:               1rem !default;
 $alert-border-radius:               $border-radius !default;
